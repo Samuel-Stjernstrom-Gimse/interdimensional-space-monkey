@@ -1,0 +1,12 @@
+.all {
+    margin: 0;
+    background-image: url("./static/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    overflow: hidden;
+    color: #ffd700;
+}

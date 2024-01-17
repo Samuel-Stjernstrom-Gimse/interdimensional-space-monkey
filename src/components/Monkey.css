@@ -1,0 +1,36 @@
+.monkeyContainer {
+    min-height: 90vh;
+    max-height: 90vh;
+    top: 25%;
+    left: 25%;
+}
+
+.monkeyBig {
+    min-height: 90vh;
+    max-height: 90vh;
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    transition: 1s;
+
+}
+
+.monkeyBig:hover {
+    scale: 1.1;
+    filter: drop-shadow(0 0 20px rgb(218, 218, 218));;
+}
+
+.monkeyBig:active {
+    filter: drop-shadow(0 0 20px rgb(255,255,0));;
+}
+
+
+@keyframes float {
+    25% {scale: 1.2}
+    25% {rotate: -10deg}
+
+    50% {scale: 1.05}
+    50% {rotate: 10deg}
+}

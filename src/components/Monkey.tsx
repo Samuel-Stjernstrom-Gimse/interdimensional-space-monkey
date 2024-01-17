@@ -1,6 +1,7 @@
-import {Box, Button} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import InputField from "./InputField";
 import {useState} from "react";
+import'./Monkey.css'
 
 const Monkey = () => {
     const [monkeyComment, setMonkeyComment] = useState("")
@@ -8,15 +9,22 @@ const Monkey = () => {
     const monkeySpeak = () => {
         setMonkeyComment(interdimensional_monkey_comments[getRandom(interdimensional_monkey_comments.length)])
     }
+    const background = require('../static/img/background.png')
+    const monkey = require('../static/img/monkey.png')
 
-    const monkey = require('../static/img/images.png')
+    const interpreter = () => {
+
+    }
 
     return (
-        <Box display={"flex"} flexDirection={"column"}>
-            <img onClick={monkeySpeak} src={monkey} alt={'monkey'}/>
-            <h3 >{monkeyComment}</h3>
-            <InputField/>
-            <Button>Translate</Button>
+        <Box display={"flex"} justifyContent={"center"} flexDirection={"row"} >
+            <Box className={'monkeyContainer'}>
+                <img className={'monkeyBig'} onClick={monkeySpeak} src={monkey} alt={'monkey'}/>
+            </Box>
+            <Box>
+                <Typography marginTop={'30%'} marginBottom={'20px'} variant={'h3'} borderRadius={'30px'}  style={{ fontSize: '30px', backgroundColor: 'rgba(40,39,39,0.85)', border: " 3px solid grey", maxWidth: '500px', minWidth:'500px', minHeight: '120px', padding: '15px' }} >{monkeyComment}</Typography>
+            </Box>
+
         </Box>
     )
 }
